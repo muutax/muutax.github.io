@@ -12,15 +12,13 @@
     text-align: center; /* Выравниваем текст по центру ячейки */
    }
   </style>
-{% if request.user.is_authenticated and request.user.is_staff %}
+
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style = "position: absolute;left:15.5%;top:2.6%">
   Добавить новую запись
 </button>
-    {% endif %}
 
     {% if update %}
         <div style = "margin-left:5%">
-
         <p class = "mt-4">Страница редактирования</p>
         <p><a href = "{% url 'edit_page' %}">Вернуться назад</a></p>
 
@@ -51,7 +49,7 @@
                         <option data-search-id = "9">Страна</option>
                         <option data-search-id = "10">Регион</option>
                         <option data-search-id = "11">E-Mail</option>
-                        <option data-search-id = "12">Номер</option>
+                        <option data-search-id = "12">Номер6</option>
                         <option data-search-id = "13">Мероприятия</option>
                     </select>
                 </div>
@@ -91,10 +89,7 @@
       <td data-search-id = "8">{{i.place_of_study}}</td>
       <td data-search-id = "9">{{i.country}}</td>
       <td data-search-id = "10">{{i.region}}</td>
-      <td data-search-id = "11">{{i.e_mail}}</td>
-      <td data-search-id = "12">{{i.phone_number}}</td>
-      <td data-search-id = "13">{{i.events}}</td>
-   {% if request.user.is_authenticated and request.user.is_staff %}
+      {% if request.user.is_authenticated and request.user.is_staff %}
       <td data-search-id = "11">{{i.e_mail}}</td>
       <td data-search-id = "12">{{i.phone_number}}</td>
           {% else %}
@@ -102,12 +97,12 @@
       <td data-search-id = "12">*</td>
       {% endif %}
       <td data-search-id = "13">{{i.events}}</td>
-       {% if request.user.is_authenticated and request.user.is_staff %}
+   {% if request.user.is_authenticated and request.user.is_staff %}
       <td><a href = "{% url 'update_page' i.id %}">&#10000;</a></td>
       <td>
           <form id = "delete_form" action = "{% url 'delete_page' i.id %}" method = "post">{% csrf_token %}</form>
           <a href = "javascript:void(0)" onclick="delete_question()">&#10006;</a></td>
-       {% endif %}
+   {% endif %}
           <script>
               function delete_question(){
                   if(confirm("Are you sure about this time?")){
