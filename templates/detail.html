@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block content %}
+      <h1 style = "padding-left: 10%;left:25%">Запись:{{get_record.first_name}}</h1>
+      <p style = "padding-left: 10%;left:25%"><a href = "/">Вернуться назад</a></p>
+      <p style = "padding-left: 10%;left:25%">Дата создания: {{get_record.create_date}}</p>
+      <p style = "padding-left: 10%;left:25%">Фамилия: {{get_record.second_name}}</p>
+      <p style = "padding-left: 10%;left:25%">Имя: {{get_record.first_name}}</p>
+      <p style = "padding-left: 10%;left:25%">Отчество: {{get_record.patronymic}}</p>
+      <p style = "padding-left: 10%;left:25%">Дата рождения: {{get_record.date_of_birth}}</p>
+      <p style = "padding-left: 10%;left:25%">Класс: {{get_record.the_class}}</p>
+      <p style = "padding-left: 10%;left:25%">Учебн.учреждение: {{get_record.educational_institution}}</p>
+      <p style = "padding-left: 10%;left:25%">Место обучения: {{get_record.place_of_study}}</p>
+      <p style = "padding-left: 10%;left:25%">Страна: {{get_record.country}}</p>
+      <p style = "padding-left: 10%;left:25%">Регион: {{get_record.region}}</p>
+      <p style = "padding-left: 10%;left:25%">E-mail: {{get_record.e_mail}}</p>
+      <p style = "padding-left: 10%;left:25%">Номер: {{get_record.phone_number}}</p>
+      <p style = "padding-left: 10%;left:25%">Мероприятия: {{get_record.events}}</p>
+{% endblock %}

@@ -1,0 +1,165 @@
+{% extends 'index.html' %}
+{% block content %}
+
+    <style>
+   table {
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+   }
+   td {
+    text-align: center; /* Выравниваем текст по центру ячейки */
+   }
+   th {
+    text-align: center; /* Выравниваем текст по центру ячейки */
+   }
+  </style>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style = "position: absolute;left:15.5%;top:2.6%">
+  Добавить новую запись
+</button>
+
+    {% if update %}
+        <div style = "margin-left:5%">
+        <p class = "mt-4">Страница редактирования</p>
+        <p><a href = "{% url 'edit_page' %}">Вернуться назад</a></p>
+
+        <form id = "update_data" method = "post">
+        <div class ="col-3">
+              {% csrf_token %}
+              {{ form }}
+          </form>
+
+        <button form = "update_data" type="submit" class="btn btn-primary mt-4">Обновить</button>
+    </div>
+        {% else %}
+<br><br><br>
+
+<div class="form-class">
+    <input type="text" class="form-control" placeholder="Кого или что ищем?"  id="search-text" style = "width:200px;padding-left: 5px;height:34px;font-size: 14px;position: fixed;left:26.5%;top:2.9%;">
+</div>
+     <form class="form-horizontal" id="page-rows-form" style = "width:13%;padding-left: 1%;height:10px;font-size: 14px;position: absolute;left:36%;top:2.6%">
+                <div class="pull-left">
+                    <select class="form-control"><option data-search-id="1" selected>Дата создания</option>
+                        <option data-search-id="2" selected>Фамилия</option>
+                        <option  data-search-id = "3">Имя</option>
+                        <option data-search-id = "4">Отчество</option>
+                        <option data-search-id = "5">Дата рождения</option>
+                        <option data-search-id = "6">Класс</option>
+                        <option data-search-id = "7">Учеб.учреждение</option>
+                        <option data-search-id = "8">Место обучения</option>
+                        <option data-search-id = "9">Страна</option>
+                        <option data-search-id = "10">Регион</option>
+                        <option data-search-id = "11">E-Mail</option>
+                        <option data-search-id = "12">Номер</option>
+                        <option data-search-id = "13">Мероприятия</option>
+                    </select>
+                </div>
+     </form>
+
+    <table class="table table-hover" id="info-table" style = "font-size: 17px; position:absolute;top:8%">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col" data-search-id = "1">Дата создания</th>
+      <th scope="col" data-search-id = "2">Фамилия</th>
+      <th scope="col" data-search-id = "3">Имя</th>
+      <th scope="col" data-search-id = "4">Отчество</th>
+      <th scope="col" data-search-id = "5">Дата рождения</th>
+      <th scope="col" data-search-id = "6">Класс</th>
+      <th scope="col" data-search-id = "7">Учеб.учреждение</th>
+      <th scope="col" data-search-id = "8">Место обучения</th>
+      <th scope="col" data-search-id = "9">Страна</th>
+      <th scope="col" data-search-id = "10">Регион</th>
+      <th scope="col" data-search-id = "11">E-Mail</th>
+      <th scope="col" data-search-id = "12">Номер</th>
+      <th scope="col" data-search-id = "13">Мероприятия</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+
+  </thead>
+  <tbody>
+{% for i in list_records %}
+   <tr>
+      <td data-search-id = "1">{{i.create_date|date:'d.m.Y'}}</td>
+      <td data-search-id = "2">{{i.second_name}}</td>
+      <td data-search-id = "3">{{i.first_name}}</td>
+      <td data-search-id = "4">{{i.patronymic}}</td>
+      <td data-search-id = "5">{{i.date_of_birth}}</td>
+      <td data-search-id = "6">{{i.the_class}}</td>
+      <td data-search-id = "7">{{i.educational_institution}}</td>
+      <td data-search-id = "8">{{i.place_of_study}}</td>
+      <td data-search-id = "9">{{i.country}}</td>
+      <td data-search-id = "10">{{i.region}}</td>
+      <td data-search-id = "11">{{i.e_mail}}</td>
+      <td data-search-id = "12">{{i.phone_number}}</td>
+      <td data-search-id = "13">{{i.events}}</td>
+      <td><a href = "{% url 'update_page' i.id %}">&#10000;</a></td>
+      <td>
+          <form id = "delete_form" action = "{% url 'delete_page' i.id %}" method = "post">{% csrf_token %}</form>
+          <a href = "javascript:void(0)" onclick="delete_question()">&#10006;</a></td>
+          <script>
+              function delete_question(){
+                  if(confirm("Are you sure about this time?")){
+                      document.getElementById('delete_form').submit()
+                  }
+              }
+          </script>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+    {% endif %}
+
+   <!-- Modal 1 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Новая запись</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form id = "add_form" method = "post" >
+              {% csrf_token %}
+              {{ form }}
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button form = "add_form" type="submit" class="btn btn-primary">Создать</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <script>
+    document.querySelector("#search-text").addEventListener("keyup", () => {
+         var phrase = document.getElementById('search-text');
+         const search_id = document.querySelector("option:checked").getAttribute("data-search-id");
+        var table = document.getElementById('info-table');
+        var regPhrase = new RegExp(phrase.value, 'i');
+        var flag = false;
+        for (var i = 1; i < table.rows.length; i++) {
+            flag = false;
+            for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+                if (search_id === table.rows[i].cells[j].getAttribute("data-search-id")){
+                    flag = regPhrase.test(table.rows[i].cells[j].innerHTML);
+                    if (flag) break;
+                }
+            }
+            if (flag) {
+                table.rows[i].style.display = "";
+            } else {
+                table.rows[i].style.display = "none";
+            }
+
+        }
+    })
+</script>
+
+
+
+{% endblock %}
