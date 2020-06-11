@@ -94,6 +94,14 @@
       <td data-search-id = "11">{{i.e_mail}}</td>
       <td data-search-id = "12">{{i.phone_number}}</td>
       <td data-search-id = "13">{{i.events}}</td>
+   {% if request.user.is_authenticated and request.user.is_staff %}
+      <td data-search-id = "11">{{i.e_mail}}</td>
+      <td data-search-id = "12">{{i.phone_number}}</td>
+          {% else %}
+          <td data-search-id = "11">*</td>
+      <td data-search-id = "12">*</td>
+      {% endif %}
+      <td data-search-id = "13">{{i.events}}</td>
        {% if request.user.is_authenticated and request.user.is_staff %}
       <td><a href = "{% url 'update_page' i.id %}">&#10000;</a></td>
       <td>
