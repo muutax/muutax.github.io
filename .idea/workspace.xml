@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6b2450c3-647d-4bc5-b323-6216032d884a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/core/media/header.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muutax.github.io" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/edit_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
@@ -135,6 +131,7 @@
       <workItem from="1591953551409" duration="672000" />
       <workItem from="1591955012479" duration="36000" />
       <workItem from="1591980874981" duration="439000" />
+      <workItem from="1591983136602" duration="33000" />
     </task>
     <servers />
   </component>
