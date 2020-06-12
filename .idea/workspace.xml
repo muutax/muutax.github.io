@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6b2450c3-647d-4bc5-b323-6216032d884a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/core/media/header.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muutax.github.io" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +49,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ckYOq2XjlagJcuIqqKwIUQ8Drv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -54,6 +63,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maximuszz\Documents\muutax.github.io\muutax.github.io\core\media" />
       <recent name="C:\Users\maximuszz\Desktop\gw" />
       <recent name="C:\Users\maximuszz\Desktop\gw\templates" />
     </key>
@@ -120,10 +130,28 @@
       <workItem from="1591840932624" duration="5569000" />
       <workItem from="1591893723646" duration="465000" />
       <workItem from="1591894205876" duration="1251000" />
+      <workItem from="1591951012761" duration="355000" />
+      <workItem from="1591952334935" duration="990000" />
+      <workItem from="1591953551409" duration="672000" />
+      <workItem from="1591955012479" duration="36000" />
+      <workItem from="1591980874981" duration="439000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

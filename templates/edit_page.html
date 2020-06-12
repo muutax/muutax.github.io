@@ -12,10 +12,11 @@
     text-align: center; /* Выравниваем текст по центру ячейки */
    }
   </style>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style = "position: absolute;left:15.5%;top:2.6%">
-  Добавить новую запись
-</button>
+    {% if request.user.is_authenticated and request.user.is_staff %}
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style = "position: absolute;left:19%;top:2.6%">
+          Добавить новую запись
+        </button>
+    {% endif %}
 
     {% if update %}
         <div style = "margin-left:5%">
@@ -34,9 +35,9 @@
 <br><br><br>
 
 <div class="form-class">
-    <input type="text" class="form-control" placeholder="Кого или что ищем?"  id="search-text" style = "width:200px;padding-left: 5px;height:34px;font-size: 14px;position: fixed;left:26.5%;top:2.9%;">
+    <input type="text" class="form-control" placeholder="Кого или что ищем?"  id="search-text" style = "width:200px;padding-left: 5px;height:34px;font-size: 14px;position: fixed;left:75.5%;top:6.8%;">
 </div>
-     <form class="form-horizontal" id="page-rows-form" style = "width:13%;padding-left: 1%;height:10px;font-size: 14px;position: absolute;left:36%;top:2.6%">
+     <form class="form-horizontal" id="page-rows-form" style = "width:13%;padding-left: 1%;height:10px;font-size: 14px;position: absolute;left:85%;top:6.5%">
                 <div class="pull-left">
                     <select class="form-control"><option data-search-id="1" selected>Дата создания</option>
                         <option data-search-id="2" selected>Фамилия</option>
@@ -55,7 +56,7 @@
                 </div>
      </form>
 
-    <table class="table table-hover" id="info-table" style = "font-size: 17px; position:absolute;top:8%">
+    <table class="table table-hover mt-4" id="info-table" style = "font-size: 17px; position:absolute;top:8%">
   <thead class="thead-light">
     <tr>
       <th scope="col" data-search-id = "1">Дата создания</th>
