@@ -50,14 +50,14 @@
                         <option data-search-id="2" selected>Фамилия</option>
                         <option  data-search-id = "3">Имя</option>
                         <option data-search-id = "4">Отчество</option>
-                        <option data-search-id = "5">Дата рождения</option>
+                        <!--<option data-search-id = "5">Дата рождения</option>-->
                         <option data-search-id = "6">Класс</option>
                         <option data-search-id = "7">Учеб.учреждение</option>
-                        <option data-search-id = "8">Место обучения</option>
-                        <option data-search-id = "9">Страна</option>
-                        <option data-search-id = "10">Регион</option>
+                        <option data-search-id = "8">Город</option>
+                        <!--<option data-search-id = "9">Страна</option>
+                        <option data-search-id = "10">Регион</option>-->
                         <option data-search-id = "11">E-Mail</option>
-                        <option data-search-id = "12">Номер6</option>
+                        <option data-search-id = "12">Номер</option>
                         <option data-search-id = "13">Мероприятия</option>
                     </select>
                 </div>
@@ -70,12 +70,12 @@
       <th scope="col" data-search-id = "2">Фамилия</th>
       <th scope="col" data-search-id = "3">Имя</th>
       <th scope="col" data-search-id = "4">Отчество</th>
-      <th scope="col" data-search-id = "5">Дата рождения</th>
+      <!--<th scope="col" data-search-id = "5">Дата рождения</th>-->
       <th scope="col" data-search-id = "6">Класс</th>
       <th scope="col" data-search-id = "7">Учеб.учреждение</th>
-      <th scope="col" data-search-id = "8">Место обучения</th>
-      <th scope="col" data-search-id = "9">Страна</th>
-      <th scope="col" data-search-id = "10">Регион</th>
+      <th scope="col" data-search-id = "8">Город</th>
+      <!--<th scope="col" data-search-id = "9">Страна</th>
+      <th scope="col" data-search-id = "10">Регион</th>-->
       <th scope="col" data-search-id = "11">E-Mail</th>
       <th scope="col" data-search-id = "12">Номер</th>
       <th scope="col" data-search-id = "13">Мероприятия</th>
@@ -91,12 +91,12 @@
       <td data-search-id = "2">{{i.second_name}}</td>
       <td data-search-id = "3">{{i.first_name}}</td>
       <td data-search-id = "4">{{i.patronymic}}</td>
-      <td data-search-id = "5">{{i.date_of_birth}}</td>
+      <!--<td data-search-id = "5">{{i.date_of_birth}}</td>-->
       <td data-search-id = "6">{{i.the_class}}</td>
       <td data-search-id = "7">{{i.educational_institution}}</td>
       <td data-search-id = "8">{{i.place_of_study}}</td>
-      <td data-search-id = "9">{{i.country}}</td>
-      <td data-search-id = "10">{{i.region}}</td>
+      <!--<td data-search-id = "9">{{i.country}}</td>
+      <td data-search-id = "10">{{i.region}}</td>-->
       {% if request.user.is_authenticated and request.user.is_staff %}
       <td data-search-id = "11">{{i.e_mail}}</td>
       <td data-search-id = "12">{{i.phone_number}}</td>
