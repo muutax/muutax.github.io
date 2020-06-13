@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6b2450c3-647d-4bc5-b323-6216032d884a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/edit_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +54,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../muutax.kurtka.io" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -132,6 +132,10 @@
       <workItem from="1591955012479" duration="36000" />
       <workItem from="1591980874981" duration="439000" />
       <workItem from="1591983136602" duration="33000" />
+      <workItem from="1591984703733" duration="48000" />
+      <workItem from="1591985107271" duration="51000" />
+      <workItem from="1592053977542" duration="1425000" />
+      <workItem from="1592055436174" duration="96000" />
     </task>
     <servers />
   </component>
