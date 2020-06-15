@@ -17,7 +17,6 @@
     text-align: center; /* Выравниваем текст по центру ячейки */
    }
   </style>
-    <button style = ";width:85px;position: absolute;left:70%;top:6.8%;" class = "btn btn-secondary mb-4" onclick = "printEl()">ПЕЧАТЬ<i class = "fas fa-print"></i></button>
     {% if request.user.is_authenticated and request.user.is_staff %}
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style = "position: absolute;left:19%;top:2.6%">
           Добавить новую запись
@@ -42,6 +41,7 @@
 
 <div class="form-class">
 
+    <button style = "width:85px;position: absolute;left:70%;top:6.8%;" class = "btn btn-secondary mb-4" onclick = "printEl()">ПЕЧАТЬ<i class = "fas fa-print"></i></button>
     <input type="text" class="form-control" placeholder="Кого или что ищем?"  id="search-text" style = "width:200px;padding-left: 5px;height:34px;font-size: 14px;position: absolute;left:75.5%;top:6.8%;">
 </div>
      <form class="form-horizontal" id="page-rows-form" style = "width:13%;padding-left: 1%;height:10px;font-size: 14px;position: absolute;left:85%;top:6.5%">
