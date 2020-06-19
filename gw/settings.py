@@ -25,7 +25,7 @@ SECRET_KEY = '&b)zsjs63y9otr$ln#d_=!fpzdn-63gv_7gud-)%!$k!n0xa^j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['muutax.pythonanywhere.com']
+ALLOWED_HOSTS = ['http://muutax.pythonanywhere.com/']
 
 
 # Application definition
