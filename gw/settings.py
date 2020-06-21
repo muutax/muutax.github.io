@@ -25,7 +25,7 @@ SECRET_KEY = '&b)zsjs63y9otr$ln#d_=!fpzdn-63gv_7gud-)%!$k!n0xa^j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://muutax.pythonanywhere.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -120,16 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    'mysite/static'
-]
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-STATICFILES_DIRS = [
-    'mysite/static',
-]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-MEDIA_URL = '/media/'
