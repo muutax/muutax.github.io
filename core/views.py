@@ -36,13 +36,9 @@ class RecordUpdateView(UpdateView):
         return super().get_context_data(**kwargs)
 
 class RecordDeleteView(DeleteView):
-    Records.objects.filter(id=id).delete()
+    model = Records
+    template_name = 'edit_page.html'
     success_url = reverse_lazy('edit_page')
-
-#def delete_page(request, id):
-#    get_record = Records.objects.get(id=id)
-#    get_record.delete()
-#    return redirect(reverse('edit_page'))
 
 class LoginView(LoginView):
     template_name = 'login.html'
