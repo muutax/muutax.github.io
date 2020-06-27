@@ -107,12 +107,9 @@
       {% endif %}
       <td data-search-id = "13">{{i.events}}</td>
    {% if request.user.is_authenticated and request.user.is_staff %}
+      <td><a href = "{% url 'update_page' i.id %}">&#10000;</a></td>
       <td>
-          <a href = "{% url 'update_page' i.id %}">&#10000;</a>
-      </td>
-       <td>
-          <a href = "{% url 'delete_page' i.pk %}">&#10006;</a>
-       </td>
+          <a href = "{% url 'delete_page' i.id %}">&#10006;</a></td></td>
    {% endif %}
     </tr>
 {% endfor %}
