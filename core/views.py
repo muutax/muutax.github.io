@@ -40,8 +40,8 @@ class RecordUpdateView(UpdateView):
 #    template_name = 'edit_page.html'
 #    success_url = reverse_lazy('edit_page')
 
-def delete_page(request, id):
-    get_record = Records.objects.get(id=id)
+def delete_page(request, pk):
+    get_record = Records.objects.get(pk=pk)
     get_record.delete()
     return redirect(reverse('edit_page'))
 
