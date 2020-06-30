@@ -67,7 +67,6 @@
     <table class="table table-hover mt-4 printEl" id="info-table" style = "font-size: 17px; position:absolute;top:8%">
   <thead class="thead-light">
     <tr>
-      <th scope="col" data-search-id = "0">id</th>
       <th scope="col" data-search-id = "1">Дата создания</th>
       <th scope="col" data-search-id = "2">Фамилия</th>
       <th scope="col" data-search-id = "3">Имя</th>
@@ -89,7 +88,6 @@
   <tbody>
 {% for i in list_records %}
    <tr>
-      <td data-search-id = "0">{{i.id}}</td>
       <td data-search-id = "1">{{i.create_date|date:'d.m.Y'}}</td>
       <td data-search-id = "2">{{i.second_name}}</td>
       <td data-search-id = "3">{{i.first_name}}</td>
@@ -114,25 +112,21 @@
           <form action = "{% url 'delete_page' i.id %}" method = "post">{% csrf_token %}</form>
           <a class = "deleteButton" href = "javascript:void(0)">&#10006;</a></td>
    {% endif %}
+
     </tr>
 {% endfor %}
   </tbody>
 </table>
         <script>
-             // <!--function delete_question(event){
-              //    if(confirm("Вы уверены, что хотите удалить запись?")){
-              //       <!-- event.target.previousSibling.submit();-->
-              //        console.log(event.target)
-              //    }
-              //}-->
-                document.querySelectorAll(".deleteButton").forEach(a => {
-                  a.addEventListener("click", (e) => {
-                      if(confirm("Вы уверены, что хотите удалить запись?")) {
-                          e.target.previousSibling.previousSibling.submit();
-                      }
-                  })
-                });
-          </script>
+        document.querySelectorAll(".deleteButton").forEach(a => {
+          a.addEventListener("click", (e) => {
+              if(confirm("Вы уверены, что хотите удалить запись?")) {
+                  e.target.previousSibling.previousSibling.submit();
+              }
+          })
+        });
+        </script>
+
     {% endif %}
 
    <!-- Modal 1 -->

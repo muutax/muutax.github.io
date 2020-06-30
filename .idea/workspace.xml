@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6b2450c3-647d-4bc5-b323-6216032d884a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1337.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gw/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/gw/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/edit_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_page.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -154,7 +152,7 @@
       <workItem from="1593205011747" duration="14000" />
       <workItem from="1593249779448" duration="10993000" />
       <workItem from="1593328451155" duration="1391000" />
-      <workItem from="1593439417827" duration="4296000" />
+      <workItem from="1593439417827" duration="4871000" />
     </task>
     <servers />
   </component>
